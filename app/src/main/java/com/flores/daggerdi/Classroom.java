@@ -8,7 +8,7 @@ public class Classroom {
     Teacher teacher;
     ArrayList<Student> students;
 
-    @Inject
+
     public Classroom(Teacher teacher, ArrayList<Student> students) {
         this.teacher = teacher;
         this.students = students;
