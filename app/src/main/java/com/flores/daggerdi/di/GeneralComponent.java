@@ -2,26 +2,33 @@ package com.flores.daggerdi.di;
 
 import android.app.Application;
 
-import com.flores.daggerdi.app.MyApplication;
+import com.flores.daggerdi.Classroom;
+import com.flores.daggerdi.ClassroomActivity;
+import com.flores.daggerdi.Student;
+import com.flores.daggerdi.Teacher;
+
+import java.util.ArrayList;
 
 import dagger.BindsInstance;
 import dagger.Component;
-import dagger.android.AndroidInjector;
-import dagger.android.DaggerApplication;
 
 @Component(modules = {
         ClassroomModule.class,
         StudentsModule.class,
         TeacherModule.class})
-public interface GeneralComponent extends AndroidInjector<DaggerApplication> {
+public interface GeneralComponent {
 
+    Teacher getTeacher();
 
-    @Component.Builder
-    interface Builder {
-        @BindsInstance
-        GeneralComponent.Builder application(Application application);
+    ArrayList<Student> getStudents();
 
-        GeneralComponent build();
-    }
+    Classroom getClassroom();
+//    @Component.Builder
+//    interface Builder {
+//        @BindsInstance
+//        GeneralComponent.Builder application(Application application);
+//
+//        GeneralComponent build();
+//    }
 
 }

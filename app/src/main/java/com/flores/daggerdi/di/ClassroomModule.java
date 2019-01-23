@@ -1,6 +1,11 @@
 package com.flores.daggerdi.di;
 
 import com.flores.daggerdi.Classroom;
+import com.flores.daggerdi.Student;
+import com.flores.daggerdi.Teacher;
+
+import java.util.ArrayList;
+
 import dagger.Module;
 import dagger.Provides;
 
@@ -8,8 +13,8 @@ import dagger.Provides;
 public class ClassroomModule {
 
     @Provides
-    Classroom providesClassroom() {
-        return new Classroom();
+    Classroom providesClassroom(Teacher teacher, ArrayList<Student> students) {
+        return new Classroom(teacher,students);
     }
 
 }

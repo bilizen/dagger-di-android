@@ -1,6 +1,9 @@
 package com.flores.daggerdi.di;
 
+import com.flores.daggerdi.Student;
 import com.flores.daggerdi.Teacher;
+
+import java.util.ArrayList;
 
 import dagger.Module;
 import dagger.Provides;
@@ -9,9 +12,9 @@ import dagger.Provides;
 public class TeacherModule {
 
     @Provides
-    Teacher providesTeacher(Teacher teacher)
+    Teacher providesTeacher()
     {
-        return teacher;
+        return new Teacher("Pablo", "Mathematics");
     }
 
 }
