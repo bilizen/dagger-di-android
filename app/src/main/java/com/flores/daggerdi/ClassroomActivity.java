@@ -10,6 +10,10 @@ import javax.inject.Inject;
 
 public class ClassroomActivity extends AppCompatActivity {
 
+
+    @Inject
+    Course course;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +22,9 @@ public class ClassroomActivity extends AppCompatActivity {
         Classroom classroom = generalComponent.getClassroom();
         classroom.getStudents();
         classroom.getTeacher();
+
+        course.getCourse();
+
 
     }
 }

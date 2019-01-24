@@ -14,4 +14,8 @@ public class Student {
         this.lastName = lastName;
     }
 
+    public String getEstudiar(){
+        return "estudiar";
+    }
+
 }
