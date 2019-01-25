@@ -10,6 +10,9 @@ import javax.inject.Inject;
 
 public class ClassroomActivity extends AppCompatActivity {
 
+    @Inject
+    School school;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +21,6 @@ public class ClassroomActivity extends AppCompatActivity {
         Classroom classroom = generalComponent.getClassroom();
         classroom.getStudents();
         classroom.getTeacher();
-
+        school.ingresoClase();
     }
 }
