@@ -1,22 +1,24 @@
 package com.flores.daggerdi.di;
 
+import android.content.Context;
+
 import com.flores.daggerdi.Classroom;
+import com.flores.daggerdi.ClassroomActivity;
 import com.flores.daggerdi.Student;
 import com.flores.daggerdi.Teacher;
 import java.util.ArrayList;
 import dagger.Component;
 
-@Component(modules = {
-        ClassroomModule.class,
+@Component(modules = {ClassroomModule.class,
         StudentsModule.class,
         TeacherModule.class})
 public interface GeneralComponent {
 
-    Teacher getTeacher();
+    void inject(ClassroomActivity classroomActivity);
 
-    ArrayList<Student> getStudents();
+//    ArrayList<Student> providesStudents();
 
-    Classroom getClassroom();
+
 //    @Component.Builder
 //    interface Builder {
 //        @BindsInstance

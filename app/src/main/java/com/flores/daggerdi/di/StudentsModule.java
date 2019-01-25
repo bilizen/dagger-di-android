@@ -17,4 +17,9 @@ public class StudentsModule {
         students.add(new Student("Juan", "Vilchez"));
         return students;
     }
+
+    @Provides
+    Student providesStudent() {
+        return new Student("Carla","Sanchez");
+    }
 }

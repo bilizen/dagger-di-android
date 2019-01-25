@@ -4,7 +4,7 @@ import javax.inject.Inject;
 
 public class School {
 
-    @Inject
+
     public School(){
     }
 
