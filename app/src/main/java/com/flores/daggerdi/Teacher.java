@@ -11,4 +11,8 @@ public class Teacher {
         this.subject = subject;
     }
 
+    public String getEnseñar(){
+        return "enseñar";
+    }
+
 }

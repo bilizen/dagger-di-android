@@ -1,8 +1,5 @@
 package com.flores.daggerdi;
 
-import java.util.ArrayList;
-
-import javax.inject.Inject;
 
 public class Student {
 
@@ -15,5 +12,8 @@ public class Student {
         this.lastName = lastName;
     }
 
+    public String getEstudiar(){
+        return "estudiar";
+    }
 
 }

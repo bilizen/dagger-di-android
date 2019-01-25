@@ -13,6 +13,9 @@ public class ClassroomActivity extends AppCompatActivity {
     @Inject
     School school;
 
+    @Inject
+    Course course;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +24,8 @@ public class ClassroomActivity extends AppCompatActivity {
         Classroom classroom = generalComponent.getClassroom();
         classroom.getStudents();
         classroom.getTeacher();
-        school.ingresoClase();
+
+        course.
+
     }
 }
