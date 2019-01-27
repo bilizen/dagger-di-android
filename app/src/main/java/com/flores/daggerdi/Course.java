@@ -6,8 +6,7 @@ public class Course {
 
     String name;
 
-    @Inject
-    public Course() {
+    Course() {
         name="algebra";
     }
 
