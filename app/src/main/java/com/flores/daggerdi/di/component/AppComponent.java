@@ -12,7 +12,6 @@ import dagger.android.AndroidInjector;
 import dagger.android.DaggerApplication;
 import dagger.android.support.AndroidSupportInjectionModule;
 
-@Singleton
 @Component(modules = {
         AndroidSupportInjectionModule.class,
         ClassroomModule.class})

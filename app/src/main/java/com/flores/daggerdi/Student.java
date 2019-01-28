@@ -1,5 +1,8 @@
 package com.flores.daggerdi;
 
+import javax.inject.Singleton;
+
+@Singleton
 public class Student {
 
     String name;

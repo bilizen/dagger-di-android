@@ -1,5 +1,8 @@
 package com.flores.daggerdi;
 
+import javax.inject.Inject;
+import javax.inject.Singleton;
+
 public class Teacher {
     String subject;
     String name;
