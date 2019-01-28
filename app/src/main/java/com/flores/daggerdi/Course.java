@@ -1,12 +1,10 @@
 package com.flores.daggerdi;
 
-import javax.inject.Inject;
-
 public class Course {
 
     String name;
 
-    Course() {
+    public Course() {
         name="algebra";
     }
 

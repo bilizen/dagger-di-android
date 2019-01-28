@@ -1,9 +1,7 @@
 package com.flores.daggerdi;
 
-import javax.inject.Inject;
 
 public class School {
-
 
     public School(){
     }

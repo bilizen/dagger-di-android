@@ -1,9 +1,8 @@
-package com.flores.daggerdi.di;
+package com.flores.daggerdi.di.module;
 
+import com.flores.daggerdi.Course;
 import com.flores.daggerdi.Student;
-
 import java.util.ArrayList;
-
 import dagger.Module;
 import dagger.Provides;
 
@@ -20,6 +19,9 @@ public class StudentsModule {
 
     @Provides
     Student providesStudent() {
-        return new Student("Carla","Sanchez");
+      return new Student("Carlos", "Perez");
     }
+
+
+
 }

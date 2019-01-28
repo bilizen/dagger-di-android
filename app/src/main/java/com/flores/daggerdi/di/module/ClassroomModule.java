@@ -1,11 +1,9 @@
-package com.flores.daggerdi.di;
+package com.flores.daggerdi.di.module;
 
 import com.flores.daggerdi.Classroom;
 import com.flores.daggerdi.Student;
 import com.flores.daggerdi.Teacher;
-
 import java.util.ArrayList;
-
 import dagger.Module;
 import dagger.Provides;
 
