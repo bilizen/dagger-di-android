@@ -1,24 +1,32 @@
 package com.flores.daggerdi;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
-
-import com.flores.daggerdi.di.component.DaggerAppComponent;
+import android.view.View;
+import android.widget.Button;
 import javax.inject.Inject;
+import dagger.android.support.DaggerAppCompatActivity;
 
-public class ClassroomActivity extends AppCompatActivity {
+public class ClassroomActivity extends DaggerAppCompatActivity {
 
     @Inject
-    Classroom classroom;
+    Teacher teacher;
+
+    Button btnNext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        DaggerAppComponent.create().inject(this);
+        teacher.getName();
 
-        Log.e("lisatas", classroom.toString());
-
+        btnNext=findViewById(R.id.btnNext);
+        btnNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(getApplicationContext(), SchoolActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

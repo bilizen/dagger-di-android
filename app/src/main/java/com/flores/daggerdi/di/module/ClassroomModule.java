@@ -1,18 +1,18 @@
 package com.flores.daggerdi.di.module;
 
-import com.flores.daggerdi.Classroom;
-import com.flores.daggerdi.Student;
-import com.flores.daggerdi.Teacher;
-import java.util.ArrayList;
+import com.flores.daggerdi.ClassroomActivity;
+import com.flores.daggerdi.SchoolActivity;
+
 import dagger.Module;
-import dagger.Provides;
+import dagger.android.ContributesAndroidInjector;
 
 @Module
-public class ClassroomModule {
+public abstract class ClassroomModule {
 
-    @Provides
-    Classroom providesClassroom(Teacher teacher, ArrayList<Student> students) {
-        return new Classroom(teacher,students);
-    }
+    @ContributesAndroidInjector(modules = TeacherModule.class)
+    abstract ClassroomActivity classroomActivity();
+
+    @ContributesAndroidInjector(modules = StudentsModule.class)
+    abstract SchoolActivity schoolActivity();
 
 }

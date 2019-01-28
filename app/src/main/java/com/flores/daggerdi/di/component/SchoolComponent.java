@@ -8,7 +8,8 @@ import dagger.Subcomponent;
 
 @SchoolActivityScope
 @Subcomponent(modules= SchoolModule.class)
-public interface SchoolComponent {
+public interface
+SchoolComponent {
 
     void inject(SchoolActivity schoolActivity);
 
