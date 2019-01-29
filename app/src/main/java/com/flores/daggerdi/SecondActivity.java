@@ -7,7 +7,10 @@ import javax.inject.Inject;
 
 import dagger.android.support.DaggerAppCompatActivity;
 
-public class SchoolActivity extends DaggerAppCompatActivity {
+public class SecondActivity extends DaggerAppCompatActivity {
+
+    @Inject
+    School school;
 
     @Inject
     Student student;
@@ -20,8 +23,7 @@ public class SchoolActivity extends DaggerAppCompatActivity {
         setSupportActionBar(toolbar);
 
         student.getNameAndLastName();
-
+        school.ingresoClase();
 
     }
-
 }

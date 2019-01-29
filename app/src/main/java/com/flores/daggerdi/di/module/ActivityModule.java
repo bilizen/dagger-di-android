@@ -1,18 +1,18 @@
 package com.flores.daggerdi.di.module;
 
-import com.flores.daggerdi.ClassroomActivity;
-import com.flores.daggerdi.SchoolActivity;
+import com.flores.daggerdi.MainActivity;
+import com.flores.daggerdi.SecondActivity;
 
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;
 
 @Module
-public abstract class ClassroomModule {
+public abstract class ActivityModule {
 
     @ContributesAndroidInjector(modules = TeacherModule.class)
-    abstract ClassroomActivity classroomActivity();
+    abstract MainActivity classroomActivity();
 
     @ContributesAndroidInjector(modules = StudentsModule.class)
-    abstract SchoolActivity schoolActivity();
+    abstract SecondActivity secondActivity();
 
 }
